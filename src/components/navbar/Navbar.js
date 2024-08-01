@@ -17,10 +17,18 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import ListAltIcon from '@mui/icons-material/ListAlt';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import StoreMallDirectoryIcon from '@mui/icons-material/StoreMallDirectory';
+import Inventory2Icon from '@mui/icons-material/Inventory2';
+import NaturePeopleIcon from '@mui/icons-material/NaturePeople';
+import HailIcon from '@mui/icons-material/Hail';
+import SensorOccupiedIcon from '@mui/icons-material/SensorOccupied';
+import HomeIcon from '@mui/icons-material/Home';
 
-const drawerWidth = 200;
+const drawerWidth = 230;
 
 const openedMixin = (theme) => ({
     width: drawerWidth,
@@ -112,28 +120,52 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Box display="flex" justifyContent="center" alignItems="center" marginTop={1}>
-            <Typography variant="h5" color={theme.palette.warning.dark} fontWeight="bold" gutterBottom>S</Typography>
-            <Typography variant="h5" color={theme.palette.error.dark} fontWeight="bold"gutterBottom>C</Typography>
-            <Typography variant="h5" color={theme.palette.info.dark} fontWeight="bold"gutterBottom>D</Typography>
-            </Box>
+            {
+                !open ?
+                <Box display="flex" justifyContent="center" alignItems="center" marginTop={2}>
+                    <Typography variant="h5" color={theme.palette.warning.dark} fontWeight="bold" gutterBottom>S</Typography>
+                    <Typography variant="h5" color={theme.palette.error.dark} fontWeight="bold"gutterBottom>C</Typography>
+                    <Typography variant="h5" color={theme.palette.info.dark} fontWeight="bold"gutterBottom>D</Typography>
+                </Box>
+                : ""
+            }
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
+            <Box display="flex" justifyContent="center" alignItems="center" marginTop={2} >
+                <Typography variant="h4" color={theme.palette.warning.dark} fontWeight="bold" gutterBottom>S</Typography>
+                <Typography variant="h4" color={theme.palette.error.dark} fontWeight="bold" gutterBottom>C</Typography>
+                <Typography variant="h4" color={theme.palette.info.dark} fontWeight="bold" gutterBottom>D</Typography>
+            </Box>
           <IconButton onClick={handleDrawerClose} size="small">
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </DrawerHeader>
+        <Divider/>
+        <List>
+          {['Dashboard','operation', 'order'].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton
+               component={Link}
+               to={index === 0 ? '/' : index === 1 ? '/operation' : "/order"}>
+                <ListItemIcon>
+                  {index === 0 ? <HomeIcon /> : index === 1 ? <AccountCircleIcon /> : <ListAltIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
         <Divider />
         <List>
           {['customerid', 'depot', 'poduct', 'restpoint', 'saller', 'situation', 'truck'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton
                component={Link}
-               to={index === 6 ? '/truck' : ""}>
+               to={index === 0 ? '/customers' : index === 2 ? "/product" : index === 3 ? "/respoint" : index === 4 ? "/seller" : index === 6 ? "/truck" : ""}>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index === 0 ? <SupportAgentIcon /> : index === 1 ? <StoreMallDirectoryIcon /> : index === 2 ? <Inventory2Icon/> : index === 3 ? <NaturePeopleIcon/> :index === 4 ? <HailIcon/> : index === 5 ? <SensorOccupiedIcon/> : index === 6 ? <LocalShippingIcon/> : ""}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>

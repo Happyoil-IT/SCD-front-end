@@ -8,6 +8,7 @@ import AddBoxRoundedIcon from '@mui/icons-material/AddBoxRounded';
 import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import TruckDetail from './TruckDetal'
 import theme from "../../theme/theme";
+import { Link } from "react-router-dom";
 
 const Truck = () => {
   const [dataList, setDataList] = useState();
@@ -102,7 +103,7 @@ const Truck = () => {
     };
 
   return (
-    <Container maxWidth="xl" sx={{ marginTop:10 }}>
+    <Container maxWidth="lg" sx={{ marginTop:10,marginBottom:3 }}>
       <Box>
         <Box display="flex" justifyContent="center" alignItems="center">
           <Typography variant="h1" color={theme.palette.warning.dark} fontWeight="bold" gutterBottom>S</Typography>
@@ -200,11 +201,11 @@ const Truck = () => {
               </Box>
           </DialogContent>
         </Dialog>
-        <TableContainer component={Paper} style={{ maxHeight: "90vh",maxWidth: 1320 }} >
+        <TableContainer component={Paper} style={{ maxHeight: "90vh" }} >
           <Table stickyHeader>
             <TableHead>
               <TableRow>
-                <TableCell sx={{ color: "white",backgroundColor: theme.palette.error.light,position: "sticky", left: 0 }}>ID</TableCell>
+                <TableCell sx={{ color: "white",backgroundColor: theme.palette.error.light,position: "sticky", left: 0, textAlign: "center", width: 50 }}>ID</TableCell>
                 <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Cap1</TableCell>
                 <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Cap2</TableCell>
                 <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Cap3</TableCell>

@@ -13,10 +13,27 @@ import { Link } from "react-router-dom";
 const Operation = () => {
   const [dataList, setDataList] = useState();
   const [open,setOpen] = React.useState();
-  const [otp,setOTP] = React.useState("");
-  const [otpback,setOTPback] = React.useState("");
-  const [salecode,setSaleCode] = React.useState("");
-  const [salename,setSaleName] = React.useState("");
+  const [BEP,setBEP] = React.useState("");
+  const [CH1,setCH1] = React.useState("");
+  const [CH2,setCH2] = React.useState("");
+  const [CH3,setCH3] = React.useState("");
+  const [CH4,setCH4] = React.useState("");
+  const [CH5,setCH5] = React.useState("");
+  const [CH6,setCH6] = React.useState("");
+  const [CH7,setCH7] = React.useState("");
+  const [CH8,setCH8] = React.useState("");
+  const [TSID,setTSID] = React.useState("");
+  const [date,setDate] = React.useState("");
+  const [depotname,setDepotname] = React.useState("");
+  const [netprofit,setNetprofit] = React.useState("");
+  const [restpoint,setRestpoint] = React.useState("");
+  const [route,setRoute] = React.useState("");
+  const [status,setStatus] = React.useState("");
+  const [sumvolume,setSumvolume] = React.useState("");
+  const [sumwt,setSumwt] = React.useState("");
+  const [time,setTime] = React.useState("");
+  const [truck,setTruck] = React.useState("");
+  const [way,setWay] = React.useState("");
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -27,7 +44,7 @@ const Operation = () => {
   };
 
     useEffect(() => {
-        database.ref('primarydata/seller').on('value', (snapshot) => {
+        database.ref('operation').on('value', (snapshot) => {
             const datas = snapshot.val();
             const dataList = [];
             for ( let id in datas ) {
@@ -40,11 +57,28 @@ const Operation = () => {
 
     const handleSubmit = () => {
       // ผลักดันข้อมูลไปยัง Realtime Database
-      database.ref('primarydata/seller').child(dataList.length).update({
-        otp : otp,
-        otpback : otpback,
-        salecode : salecode,
-        salename : salename
+      database.ref('operation').child(dataList.length).update({
+        BEP: BEP,
+        CH1: CH1,
+        CH2: CH2,
+        CH3: CH3,
+        CH4: CH4,
+        CH5: CH5,
+        CH6: CH6,
+        CH7: CH7,
+        CH8: CH8,
+        TSID: TSID,
+        date: date,
+        depotname: depotname,
+        netprofit: netprofit,
+        restpoint: restpoint,
+        route: route,
+        status: status,
+        sumvolume: sumvolume,
+        sumwt: sumwt,
+        time: time,
+        truck: truck,
+        ระยะทาง: way
       }).then(() => {
         console.log('Data pushed successfully');
       }).catch((error) => {
@@ -61,7 +95,7 @@ const Operation = () => {
           <Typography variant="h1" color={theme.palette.error.dark} fontWeight="bold" gutterBottom>C</Typography>
           <Typography variant="h1" color={theme.palette.info.dark} fontWeight="bold" gutterBottom>D</Typography>
         </Box>
-        <Typography variant="h5" color={theme.palette.info.dark} fontWeight="bold" textAlign="center" sx={{ marginTop: -6,marginBottom:2 }} gutterBottom>(ข้อมูลของ Seller)</Typography>
+        <Typography variant="h5" color={theme.palette.info.dark} fontWeight="bold" textAlign="center" sx={{ marginTop: -6,marginBottom:2 }} gutterBottom>(ข้อมูลของ Operation)</Typography>
         <Dialog
           open={open}
           onClose={handleClose}
@@ -75,36 +109,172 @@ const Operation = () => {
                 <Grid item xs={6}>
                   <TextField 
                     size="small"
-                    label="OTP"
+                    label="BEP"
                     fullWidth
-                    onChange={(e) => setOTP(e.target.value)}
+                    onChange={(e) => setBEP(e.target.value)}
                   />
                 </Grid>
                 <Grid item xs={6}>
                   <TextField 
                     size="small"
-                    label="OTP-Back"
+                    label="CH1"
                     fullWidth
-                    onChange={(e) => setOTPback(e.target.value)}
+                    onChange={(e) => setCH1(e.target.value)}
                   />
                 </Grid>
                 <Grid item xs={6}>
                   <TextField 
                     size="small"
-                    label="Sale-Code"
+                    label="CH2"
                     fullWidth
-                    onChange={(e) => setSaleCode(e.target.value)}
+                    onChange={(e) => setCH2(e.target.value)}
                   />
                 </Grid>
                 <Grid item xs={6}>
                   <TextField 
                     size="small"
-                    label="Sale-Name"
+                    label="CH3"
                     fullWidth
-                    onChange={(e) => setSaleName(e.target.value)}
+                    onChange={(e) => setCH3(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="CH4"
+                    fullWidth
+                    onChange={(e) => setCH4(e.target.value)}
                   />
                 </Grid>
               </Grid>
+              <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="CH5"
+                    fullWidth
+                    onChange={(e) => setCH5(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="CH6"
+                    fullWidth
+                    onChange={(e) => setCH6(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="CH7"
+                    fullWidth
+                    onChange={(e) => setCH7(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="CH8"
+                    fullWidth
+                    onChange={(e) => setCH8(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="TSID"
+                    fullWidth
+                    onChange={(e) => setTSID(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="date"
+                    fullWidth
+                    onChange={(e) => setDate(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="depotname"
+                    fullWidth
+                    onChange={(e) => setDepotname(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="netprofit"
+                    fullWidth
+                    onChange={(e) => setNetprofit(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="restpoint"
+                    fullWidth
+                    onChange={(e) => setRestpoint(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="route"
+                    fullWidth
+                    onChange={(e) => setRoute(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="status"
+                    fullWidth
+                    onChange={(e) => setStatus(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="sumvolume"
+                    fullWidth
+                    onChange={(e) => setSumvolume(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="sumwt"
+                    fullWidth
+                    onChange={(e) => setSumwt(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="time"
+                    fullWidth
+                    onChange={(e) => setTime(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="truck"
+                    fullWidth
+                    onChange={(e) => setTruck(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField 
+                    size="small"
+                    label="ระยะทาง"
+                    fullWidth
+                    onChange={(e) => setWay(e.target.value)}
+                  />
+                </Grid>
               <Divider sx={{ marginTop:3, marginBottom:3 }}/>
               <Box display="flex" justifyContent="center" alignItems="center">
                 <Button variant="contained" color="error" onClick={handleClose} sx={{ marginRight:1 }}>ยกเลิก</Button>
@@ -117,10 +287,27 @@ const Operation = () => {
             <TableHead>
               <TableRow>
                 <TableCell sx={{ color: "white",backgroundColor: theme.palette.error.light,position: "sticky", left: 0, textAlign: "center" }}>ID</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>OTP</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>OTP-Back</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Sale_Code</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Sale_Name</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>BEP</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH1</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH2</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH3</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH4</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH5</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH6</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH7</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH8</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>TSID</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Date</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Depotname</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Netprofit</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Restpoint</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Status</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Sumvolume</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Sumwt</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Time</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Truck</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>ระยะทาง</TableCell>
+                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "left" }}>Route</TableCell>
                 <TableCell sx={{ textAlign: "center",backgroundColor: theme.palette.error.light,position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TableCell>
               </TableRow>
             </TableHead>

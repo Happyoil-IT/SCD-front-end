@@ -10,6 +10,7 @@ import Truck from "./components/truck/Truck"
 import Seller from "./components/seller/Seller"
 import Restpoint from "./components/respoint/Restpoint"
 import Order from "./components/order/Order"
+import Operation from "./components/operation/Operation"
 
 const App = () => {
     return (
@@ -32,6 +33,9 @@ const App = () => {
                             <Routes>
                                 <Route path="/order" element={
                                     < Order />
+                                } />
+                                <Route path="/operation" element={
+                                    < Operation />
                                 } />
                                 <Route path="/customers" element={
                                     < Customers />

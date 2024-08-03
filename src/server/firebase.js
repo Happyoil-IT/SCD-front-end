@@ -2,15 +2,15 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/database';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDGv2PyFPOJk1oeUD5tX0JxIEmi43y5De0",
-    authDomain: "scd-data.firebaseapp.com",
-    databaseURL: "https://scd-data-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "scd-data",
-    storageBucket: "scd-data.appspot.com",
-    messagingSenderId: "193982526663",
-    appId: "1:193982526663:web:46950399ed2af6e0577ae2",
-    measurementId: "G-EE8JQTNW3G"
-  };
+  apiKey: "AIzaSyANVwXomQXT6vog-jmRW8aepH-wmDPdirI",
+  authDomain: "scd-data-d686c.firebaseapp.com",
+  databaseURL: "https://scd-data-d686c-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "scd-data-d686c",
+  storageBucket: "scd-data-d686c.appspot.com",
+  messagingSenderId: "1021130467589",
+  appId: "1:1021130467589:web:31cee191f3fc286026af6c",
+  measurementId: "G-R9E2CCVB2E"
+};
 
   if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);

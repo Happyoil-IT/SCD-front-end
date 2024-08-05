@@ -91,6 +91,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.BEP}
                 onChange={(e) => setBEP(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -98,6 +99,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.CH1}
                 onChange={(e) => setCH1(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -105,6 +107,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.CH2}
                 onChange={(e) => setCH2(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -112,6 +115,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.CH3}
                 onChange={(e) => setCH3(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -119,6 +123,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.CH4}
                 onChange={(e) => setCH4(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -126,6 +131,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.CH5}
                 onChange={(e) => setCH5(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -133,6 +139,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.CH6}
                 onChange={(e) => setCH6(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -140,6 +147,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.CH7}
                 onChange={(e) => setCH7(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -147,6 +155,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.CH8}
                 onChange={(e) => setCH8(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -154,6 +163,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.TSID}
                 onChange={(e) => setTSID(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -161,6 +171,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.date}
                 onChange={(e) => setDate(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -168,6 +179,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.depotname}
                 onChange={(e) => setDepotname(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -175,6 +187,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.netprofit}
                 onChange={(e) => setNetprofit(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -182,6 +195,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.restpoint}
                 onChange={(e) => setRestpoint(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -189,6 +203,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.status}
                 onChange={(e) => setStatus(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -196,6 +211,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.sumvolume}
                 onChange={(e) => setSumvolume(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -203,6 +219,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.sumwt}
                 onChange={(e) => setSumwt(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -210,6 +227,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.time}
                 onChange={(e) => setTime(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -217,6 +235,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.truck}
                 onChange={(e) => setTruck(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -224,6 +243,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.ระยะทาง}
                 onChange={(e) => setWay(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -231,6 +251,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.route}
                 onChange={(e) => setRoute(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: "lightgray",}}>

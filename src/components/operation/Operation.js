@@ -9,6 +9,7 @@ import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import OperationDetail from './OperationDetail'
 import theme from "../../theme/theme";
 import { Link } from "react-router-dom";
+import { TablecellHeader } from "../../theme/style";
 
 const Operation = () => {
   const [dataList, setDataList] = useState();
@@ -286,29 +287,29 @@ const Operation = () => {
           <Table stickyHeader>
             <TableHead>
               <TableRow>
-                <TableCell sx={{ color: "white",backgroundColor: theme.palette.error.light,position: "sticky", left: 0, textAlign: "center" }}>ID</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>BEP</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH1</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH2</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH3</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH4</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH5</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH6</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH7</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CH8</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>TSID</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Date</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Depotname</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Netprofit</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Restpoint</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Status</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Sumvolume</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Sumwt</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Time</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Truck</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>ระยะทาง</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "left" }}>Route</TableCell>
-                <TableCell sx={{ textAlign: "center",backgroundColor: theme.palette.error.light,position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TableCell>
+                <TablecellHeader sx={{ position: "sticky", left: 0 }}>ID</TablecellHeader>
+                <TablecellHeader>BEP</TablecellHeader>
+                <TablecellHeader>CH1</TablecellHeader>
+                <TablecellHeader>CH2</TablecellHeader>
+                <TablecellHeader>CH3</TablecellHeader>
+                <TablecellHeader>CH4</TablecellHeader>
+                <TablecellHeader>CH5</TablecellHeader>
+                <TablecellHeader>CH6</TablecellHeader>
+                <TablecellHeader>CH7</TablecellHeader>
+                <TablecellHeader>CH8</TablecellHeader>
+                <TablecellHeader>TSID</TablecellHeader>
+                <TablecellHeader>Date</TablecellHeader>
+                <TablecellHeader>Depotname</TablecellHeader>
+                <TablecellHeader>Netprofit</TablecellHeader>
+                <TablecellHeader>Restpoint</TablecellHeader>
+                <TablecellHeader>Status</TablecellHeader>
+                <TablecellHeader>Sumvolume</TablecellHeader>
+                <TablecellHeader>Sumwt</TablecellHeader>
+                <TablecellHeader>Time</TablecellHeader>
+                <TablecellHeader>Truck</TablecellHeader>
+                <TablecellHeader>ระยะทาง</TablecellHeader>
+                <TablecellHeader sx={{ textAlign: "left" }}>Route</TablecellHeader>
+                <TablecellHeader sx={{ position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TablecellHeader>
               </TableRow>
             </TableHead>
             <TableBody>

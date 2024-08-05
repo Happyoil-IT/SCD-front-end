@@ -9,6 +9,7 @@ import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import theme from "../../theme/theme";
+import { TablecellBody } from "../../theme/style";
 
 const TruckDetail = ({row}) => {
     const [edit,setEdit] = React.useState("");
@@ -118,277 +119,315 @@ const TruckDetail = ({row}) => {
         {
           edit === row.id ?
           <TableRow>
-            <TableCell sx={{ backgroundColor: "lightgray" }}>{row.id}</TableCell>
-            <TableCell>
+            <TablecellBody sx={{ backgroundColor: "lightgray" }}>{row.id}</TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.Cap1}
                 onChange={(e) => setCap1(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.Cap2}
                 onChange={(e) => setCap2(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.Cap3}
                 onChange={(e) => setCap3(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.Cap4}
                 onChange={(e) => setCap4(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.Cap5}
                 onChange={(e) => setCap5(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.Cap6}
                 onChange={(e) => setCap6(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.Cap7}
                 onChange={(e) => setCap7(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.Cap8}
                 onChange={(e) => setCap8(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.PD1}
                 onChange={(e) => setPD1(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.PD2}
                 onChange={(e) => setPD2(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.PD3}
                 onChange={(e) => setPD3(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.PD4}
                 onChange={(e) => setPD4(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.PD5}
                 onChange={(e) => setPD5(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.PD6}
                 onChange={(e) => setPD6(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.PD7}
                 onChange={(e) => setPD7(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.PD8}
                 onChange={(e) => setPD8(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.V1}
                 onChange={(e) => setV1(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.V2}
                 onChange={(e) => setV2(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.V3}
                 onChange={(e) => setV3(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.V4}
                 onChange={(e) => setV4(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.V5}
                 onChange={(e) => setV5(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.V6}
                 onChange={(e) => setV6(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.V7}
                 onChange={(e) => setV7(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.V8}
                 onChange={(e) => setV8(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.locationล่าสุด}
                 onChange={(e) => setNum1(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.จำนวนช่อง}
                 onChange={(e) => setNum2(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.ทะเบียนหัว}
                 onChange={(e) => setNum3(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.ทะเบียนหาง}
                 onChange={(e) => setNum4(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.น้ำหนัก}
                 onChange={(e) => setNum5(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.ประกัน}
                 onChange={(e) => setNum6(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.พขร}
                 onChange={(e) => setNum7(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.พรบ}
                 onChange={(e) => setNum8(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.ภาษี}
                 onChange={(e) => setNum9(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.สถานะรถ}
                 onChange={(e) => setNum10(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.เรทน้ำมัน}
                 onChange={(e) => setNum11(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.เวลาlocation}
                 onChange={(e) => setNum12(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.เวลาสถานะ}
                 onChange={(e) => setNum13(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell>
+            </TablecellBody>
+            <TablecellBody>
               <TextField 
                 size="small"
                 defaultValue={row.แผนPM}
                 onChange={(e) => setNum14(e.target.value)}
+                fullWidth
               />
-            </TableCell>
-            <TableCell width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: "lightgray",}}>
+            </TablecellBody>
+            <TablecellBody width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: "lightgray",}}>
               <IconButton color="success" sx={{ backgroundColor: theme.palette.primary.contrastText }} onClick={completeData}><CheckCircleRoundedIcon/></IconButton>
               <IconButton color="error" onClick={() => setEdit("")} sx={{ backgroundColor: theme.palette.primary.contrastText }}><CancelRoundedIcon/></IconButton>
-            </TableCell>
+            </TablecellBody>
           </TableRow>
           :
           <TableRow sx={{ backgroundColor: "lightgray" }}>

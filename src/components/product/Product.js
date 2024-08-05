@@ -9,6 +9,7 @@ import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import ProductDetail from './ProductDetail'
 import theme from "../../theme/theme";
 import { Link } from "react-router-dom";
+import { TablecellHeader } from "../../theme/style";
 
 const Product = () => {
   const [dataList, setDataList] = useState();
@@ -96,10 +97,10 @@ const Product = () => {
           <Table stickyHeader>
             <TableHead>
               <TableRow>
-                <TableCell sx={{ color: "white",backgroundColor: theme.palette.error.light,position: "sticky", left: 0, textAlign: "center", width: 50 }}>ID</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>SG</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>PD_Name</TableCell>
-                <TableCell sx={{ textAlign: "center",backgroundColor: theme.palette.error.light,position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TableCell>
+                <TablecellHeader sx={{ position: "sticky", left: 0, width: 50 }}>ID</TablecellHeader>
+                <TablecellHeader>SG</TablecellHeader>
+                <TablecellHeader>PD_Name</TablecellHeader>
+                <TablecellHeader sx={{ position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TablecellHeader>
               </TableRow>
             </TableHead>
             <TableBody>

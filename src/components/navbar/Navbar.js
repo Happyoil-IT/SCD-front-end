@@ -1,22 +1,9 @@
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
-import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
-import CssBaseline from '@mui/material/CssBaseline';
 import MuiAppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import ListAltIcon from '@mui/icons-material/ListAlt';
@@ -27,6 +14,11 @@ import NaturePeopleIcon from '@mui/icons-material/NaturePeople';
 import HailIcon from '@mui/icons-material/Hail';
 import SensorOccupiedIcon from '@mui/icons-material/SensorOccupied';
 import HomeIcon from '@mui/icons-material/Home';
+import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import { Box, CssBaseline, Divider, Grid, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material';
 
 const drawerWidth = 230;
 
@@ -129,6 +121,19 @@ export default function PersistentDrawerLeft() {
                 </Box>
                 : ""
             }
+            <Grid container spacing={2}>
+              <Grid item xs={6}>
+
+              </Grid>
+              <Grid item xs={6} justifyContent="right" display="flex">
+                <IconButton color="inherit">
+                  <ManageAccountsIcon/>
+                </IconButton>
+                <IconButton color="inherit">
+                  <MeetingRoomIcon/>
+                </IconButton>
+              </Grid>
+            </Grid>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>

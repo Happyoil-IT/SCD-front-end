@@ -8,6 +8,7 @@ import AddBoxRoundedIcon from '@mui/icons-material/AddBoxRounded';
 import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import CustomersDetail from './CustomersDetail'
 import theme from "../../theme/theme";
+import { TablecellHeader } from "../../theme/style";
 
 const Customers = () => {
   const [dataList, setDataList] = useState();
@@ -154,16 +155,16 @@ const Customers = () => {
           <Table stickyHeader>
             <TableHead>
               <TableRow>
-                <TableCell sx={{ color: "white",backgroundColor: theme.palette.error.light,position: "sticky", left: 0, textAlign: "center", width: 50 }}>ID</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>CustomerID</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Address</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Credit_Limit</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Credit_Term</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Custag</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Debt</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Location</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Route</TableCell>
-                <TableCell sx={{ textAlign: "center",backgroundColor: theme.palette.error.light,position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TableCell>
+                <TablecellHeader sx={{ position: "sticky", left: 0, width: 50 }}>ID</TablecellHeader>
+                <TablecellHeader>CustomerID</TablecellHeader>
+                <TablecellHeader>Address</TablecellHeader>
+                <TablecellHeader>Credit_Limit</TablecellHeader>
+                <TablecellHeader>Credit_Term</TablecellHeader>
+                <TablecellHeader>Custag</TablecellHeader>
+                <TablecellHeader>Debt</TablecellHeader>
+                <TablecellHeader>Location</TablecellHeader>
+                <TablecellHeader>Route</TablecellHeader>
+                <TablecellHeader sx={{ position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TablecellHeader>
               </TableRow>
             </TableHead>
             <TableBody>

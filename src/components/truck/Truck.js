@@ -9,6 +9,7 @@ import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import TruckDetail from './TruckDetal'
 import theme from "../../theme/theme";
 import { Link } from "react-router-dom";
+import { TablecellHeader } from "../../theme/style";
 
 const Truck = () => {
   const [dataList, setDataList] = useState();
@@ -205,46 +206,46 @@ const Truck = () => {
           <Table stickyHeader>
             <TableHead>
               <TableRow>
-                <TableCell sx={{ color: "white",backgroundColor: theme.palette.error.light,position: "sticky", left: 0, textAlign: "center", width: 50 }}>ID</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Cap1</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Cap2</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Cap3</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Cap4</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Cap5</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Cap6</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Cap7</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>Cap8</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>PD1</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>PD2</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>PD3</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>PD4</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>PD5</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>PD6</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>PD7</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>PD8</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>V1</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>V2</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>V3</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>V4</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>V5</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>V6</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>V7</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>V8</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>locationล่าสุด</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>จำนวนช่อง</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>ทะเบียนหัว</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>ทะเบียนหาง</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>น้ำหนัก</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>ประกัน</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>พขร</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>พรบ</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>ภาษี</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>สถานะรถ</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>เรทน้ำมัน</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>เวลาlocation</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>เวลาสถานะ</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>แผนPM</TableCell>
-                <TableCell sx={{ textAlign: "center",backgroundColor: theme.palette.error.light,position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TableCell>
+                <TablecellHeader sx={{ position: "sticky", left: 0, width: 50 }}>ID</TablecellHeader>
+                <TablecellHeader>Cap1</TablecellHeader>
+                <TablecellHeader>Cap2</TablecellHeader>
+                <TablecellHeader>Cap3</TablecellHeader>
+                <TablecellHeader>Cap4</TablecellHeader>
+                <TablecellHeader>Cap5</TablecellHeader>
+                <TablecellHeader>Cap6</TablecellHeader>
+                <TablecellHeader>Cap7</TablecellHeader>
+                <TablecellHeader>Cap8</TablecellHeader>
+                <TablecellHeader>PD1</TablecellHeader>
+                <TablecellHeader>PD2</TablecellHeader>
+                <TablecellHeader>PD3</TablecellHeader>
+                <TablecellHeader>PD4</TablecellHeader>
+                <TablecellHeader>PD5</TablecellHeader>
+                <TablecellHeader>PD6</TablecellHeader>
+                <TablecellHeader>PD7</TablecellHeader>
+                <TablecellHeader>PD8</TablecellHeader>
+                <TablecellHeader>V1</TablecellHeader>
+                <TablecellHeader>V2</TablecellHeader>
+                <TablecellHeader>V3</TablecellHeader>
+                <TablecellHeader>V4</TablecellHeader>
+                <TablecellHeader>V5</TablecellHeader>
+                <TablecellHeader>V6</TablecellHeader>
+                <TablecellHeader>V7</TablecellHeader>
+                <TablecellHeader>V8</TablecellHeader>
+                <TablecellHeader>locationล่าสุด</TablecellHeader>
+                <TablecellHeader>จำนวนช่อง</TablecellHeader>
+                <TablecellHeader>ทะเบียนหัว</TablecellHeader>
+                <TablecellHeader>ทะเบียนหาง</TablecellHeader>
+                <TablecellHeader>น้ำหนัก</TablecellHeader>
+                <TablecellHeader>ประกัน</TablecellHeader>
+                <TablecellHeader>พขร</TablecellHeader>
+                <TablecellHeader>พรบ</TablecellHeader>
+                <TablecellHeader>ภาษี</TablecellHeader>
+                <TablecellHeader>สถานะรถ</TablecellHeader>
+                <TablecellHeader>เรทน้ำมัน</TablecellHeader>
+                <TablecellHeader>เวลาlocation</TablecellHeader>
+                <TablecellHeader>เวลาสถานะ</TablecellHeader>
+                <TablecellHeader>แผนPM</TablecellHeader>
+                <TablecellHeader sx={{ position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TablecellHeader>
               </TableRow>
             </TableHead>
             <TableBody>

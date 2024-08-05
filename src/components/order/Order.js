@@ -9,6 +9,7 @@ import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import OrderDetail from './OrderDetail'
 import theme from "../../theme/theme";
 import { Link } from "react-router-dom";
+import { TablecellHeader } from "../../theme/style";
 
 const Order = () => {
   const [dataList, setDataList] = useState();
@@ -276,28 +277,28 @@ const Order = () => {
           <Table stickyHeader>
             <TableHead>
               <TableRow>
-                <TableCell sx={{ color: "white",backgroundColor: theme.palette.error.light,position: "sticky", left: 0, textAlign: "center", width: 50 }}>ID</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>address</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>billing</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>buyprice</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>customer</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>date</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>depot</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>location</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>orderseller</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>ordersellerID</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>orderstatus</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>ordertag</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>piclink</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>product</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>sellprice</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>seq</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>time</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>truck</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>volume</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>wt</TableCell>
-                <TableCell sx={{ backgroundColor: theme.palette.error.main, color: "white", textAlign: "center" }}>กำหนดชำระ</TableCell>
-                <TableCell sx={{ textAlign: "center",backgroundColor: theme.palette.error.light,position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TableCell>
+                <TablecellHeader sx={{ position: "sticky", left: 0, width: 50 }}>ID</TablecellHeader>
+                <TablecellHeader>address</TablecellHeader>
+                <TablecellHeader>billing</TablecellHeader>
+                <TablecellHeader>buyprice</TablecellHeader>
+                <TablecellHeader>customer</TablecellHeader>
+                <TablecellHeader>date</TablecellHeader>
+                <TablecellHeader>depot</TablecellHeader>
+                <TablecellHeader>location</TablecellHeader>
+                <TablecellHeader>orderseller</TablecellHeader>
+                <TablecellHeader>ordersellerID</TablecellHeader>
+                <TablecellHeader>orderstatus</TablecellHeader>
+                <TablecellHeader>ordertag</TablecellHeader>
+                <TablecellHeader>piclink</TablecellHeader>
+                <TablecellHeader>product</TablecellHeader>
+                <TablecellHeader>sellprice</TablecellHeader>
+                <TablecellHeader>seq</TablecellHeader>
+                <TablecellHeader>time</TablecellHeader>
+                <TablecellHeader>truck</TablecellHeader>
+                <TablecellHeader>volume</TablecellHeader>
+                <TablecellHeader>wt</TablecellHeader>
+                <TablecellHeader>กำหนดชำระ</TablecellHeader>
+                <TablecellHeader sx={{ position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TablecellHeader>
               </TableRow>
             </TableHead>
             <TableBody>

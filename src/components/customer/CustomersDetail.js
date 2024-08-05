@@ -64,6 +64,7 @@ const CustomersDetail = ({row}) => {
                 size="small"
                 defaultValue={row.ID}
                 onChange={(e) => setCustomerID(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -71,6 +72,7 @@ const CustomersDetail = ({row}) => {
                 size="small"
                 defaultValue={row.address}
                 onChange={(e) => setAddress(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -78,6 +80,7 @@ const CustomersDetail = ({row}) => {
                 size="small"
                 defaultValue={row.creditlimit}
                 onChange={(e) => setCreditLimit(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -85,6 +88,7 @@ const CustomersDetail = ({row}) => {
                 size="small"
                 defaultValue={row.creditterm}
                 onChange={(e) => setCreditTerm(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -92,6 +96,7 @@ const CustomersDetail = ({row}) => {
                 size="small"
                 defaultValue={row.custag}
                 onChange={(e) => setCustag(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -99,6 +104,7 @@ const CustomersDetail = ({row}) => {
                 size="small"
                 defaultValue="-"
                 onChange={(e) => setDebt(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -106,6 +112,7 @@ const CustomersDetail = ({row}) => {
                 size="small"
                 defaultValue={row.location}
                 onChange={(e) => setLocation(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -113,6 +120,7 @@ const CustomersDetail = ({row}) => {
                 size="small"
                 defaultValue={row.route}
                 onChange={(e) => setRoute(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: "lightgray",}}>

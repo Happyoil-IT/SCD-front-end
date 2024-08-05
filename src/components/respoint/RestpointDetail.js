@@ -54,6 +54,7 @@ const RespointDetail = ({row}) => {
                 size="small"
                 defaultValue={row.restdetail}
                 onChange={(e) => setRestDetail(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -61,6 +62,7 @@ const RespointDetail = ({row}) => {
                 size="small"
                 defaultValue={row.restlocation}
                 onChange={(e) => setRestLocation(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -68,6 +70,7 @@ const RespointDetail = ({row}) => {
                 size="small"
                 defaultValue={row.restname}
                 onChange={(e) => setRestName(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: "lightgray",}}>

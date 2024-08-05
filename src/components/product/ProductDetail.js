@@ -52,6 +52,7 @@ const ProductDetail = ({row}) => {
                 size="small"
                 defaultValue={row.SG}
                 onChange={(e) => setSG(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -59,6 +60,7 @@ const ProductDetail = ({row}) => {
                 size="small"
                 defaultValue={row.pdname}
                 onChange={(e) => setPDName(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: "lightgray",}}>

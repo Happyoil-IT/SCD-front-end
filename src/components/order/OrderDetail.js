@@ -88,6 +88,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.address}
                 onChange={(e) => setAddress(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -95,6 +96,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.billing}
                 onChange={(e) => setBilling(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -102,6 +104,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.buyprice}
                 onChange={(e) => setBuyprice(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -109,6 +112,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.customer}
                 onChange={(e) => setCustomer(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -116,6 +120,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.date}
                 onChange={(e) => setDate(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -123,6 +128,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.depot}
                 onChange={(e) => setDepot(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -130,6 +136,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.location}
                 onChange={(e) => setLocation(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -137,6 +144,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.orderseller}
                 onChange={(e) => setOrderseller(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -144,6 +152,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.ordersellerID}
                 onChange={(e) => setOrdersellerID(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -151,6 +160,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.orderstatus}
                 onChange={(e) => setOrderstatus(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -158,6 +168,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.ordertag}
                 onChange={(e) => setOrdertag(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -165,6 +176,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.piclink}
                 onChange={(e) => setPiclink(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -172,6 +184,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.product}
                 onChange={(e) => setProduct(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -179,6 +192,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.sellprice}
                 onChange={(e) => setSellprice(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -186,6 +200,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.seq}
                 onChange={(e) => setSeq(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -193,6 +208,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.time}
                 onChange={(e) => setTime(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -200,6 +216,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.truck}
                 onChange={(e) => setTruck(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -207,6 +224,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.volume}
                 onChange={(e) => setVolume(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -214,6 +232,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.wt}
                 onChange={(e) => setWt(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -221,6 +240,7 @@ const OrderDetail = ({row}) => {
                 size="small"
                 defaultValue={row.กำหนดชำระ}
                 onChange={(e) => setFixed(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: "lightgray",}}>

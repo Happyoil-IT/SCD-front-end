@@ -56,6 +56,7 @@ const SellerDetail = ({row}) => {
                 size="small"
                 defaultValue={row.otp}
                 onChange={(e) => setOTP(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -63,6 +64,7 @@ const SellerDetail = ({row}) => {
                 size="small"
                 defaultValue={row.otpback}
                 onChange={(e) => setOTPback(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -70,6 +72,7 @@ const SellerDetail = ({row}) => {
                 size="small"
                 defaultValue={row.salecode}
                 onChange={(e) => setSaleCode(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell>
@@ -77,6 +80,7 @@ const SellerDetail = ({row}) => {
                 size="small"
                 defaultValue={row.salename}
                 onChange={(e) => setSaleName(e.target.value)}
+                fullWidth
               />
             </TableCell>
             <TableCell width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: "lightgray",}}>

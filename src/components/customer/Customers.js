@@ -79,7 +79,7 @@ const Customers = () => {
           <Divider />
             <DialogContent>
               <Grid container spacing={2}>
-                <Grid item xs={4}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="customerID"
@@ -87,7 +87,7 @@ const Customers = () => {
                     onChange={(e) => setCustomerID(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item xs={9}>
                   <TextField 
                     size="small"
                     label="address"

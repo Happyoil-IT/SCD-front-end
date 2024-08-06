@@ -105,7 +105,7 @@ const Order = () => {
           <Divider />
             <DialogContent>
               <Grid container spacing={2}>
-                <Grid item xs={8}>
+                <Grid item xs={12}>
                   <TextField 
                     size="small"
                     label="address"
@@ -113,7 +113,7 @@ const Order = () => {
                     onChange={(e) => setAddress(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="billing"
@@ -121,7 +121,7 @@ const Order = () => {
                     onChange={(e) => setBilling(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="buyprice"
@@ -153,7 +153,7 @@ const Order = () => {
                     onChange={(e) => setDepot(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12}>
                   <TextField 
                     size="small"
                     label="location"
@@ -161,7 +161,7 @@ const Order = () => {
                     onChange={(e) => setLocation(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="orderseller"
@@ -169,7 +169,7 @@ const Order = () => {
                     onChange={(e) => setOrderseller(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="ordersellerID"
@@ -177,7 +177,7 @@ const Order = () => {
                     onChange={(e) => setOrdersellerID(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="orderstatus"
@@ -185,7 +185,7 @@ const Order = () => {
                     onChange={(e) => setOrderstatus(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="ordertag"
@@ -193,7 +193,7 @@ const Order = () => {
                     onChange={(e) => setOrdertag(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="piclink"
@@ -201,7 +201,7 @@ const Order = () => {
                     onChange={(e) => setPiclink(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="product"
@@ -209,7 +209,7 @@ const Order = () => {
                     onChange={(e) => setProduct(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="sellprice"
@@ -217,7 +217,7 @@ const Order = () => {
                     onChange={(e) => setSellprice(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="seq"
@@ -225,7 +225,7 @@ const Order = () => {
                     onChange={(e) => setSeq(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="time"
@@ -241,7 +241,7 @@ const Order = () => {
                     onChange={(e) => setTruck(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="volume"
@@ -249,7 +249,7 @@ const Order = () => {
                     onChange={(e) => setVolume(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="wt"
@@ -257,7 +257,7 @@ const Order = () => {
                     onChange={(e) => setWT(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12}>
                   <TextField 
                     size="small"
                     label="กำหนดชำระ"

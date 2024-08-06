@@ -73,7 +73,7 @@ const Seller = () => {
           <Divider />
             <DialogContent>
               <Grid container spacing={2}>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="OTP"
@@ -81,7 +81,7 @@ const Seller = () => {
                     onChange={(e) => setOTP(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="OTP-Back"
@@ -89,7 +89,7 @@ const Seller = () => {
                     onChange={(e) => setOTPback(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="Sale-Code"
@@ -97,7 +97,7 @@ const Seller = () => {
                     onChange={(e) => setSaleCode(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12}>
                   <TextField 
                     size="small"
                     label="Sale-Name"

@@ -107,7 +107,7 @@ const Operation = () => {
           <Divider />
             <DialogContent>
               <Grid container spacing={2}>
-                <Grid item xs={6}>
+                <Grid item xs={2}>
                   <TextField 
                     size="small"
                     label="BEP"
@@ -115,7 +115,7 @@ const Operation = () => {
                     onChange={(e) => setBEP(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={2}>
                   <TextField 
                     size="small"
                     label="CH1"
@@ -123,7 +123,7 @@ const Operation = () => {
                     onChange={(e) => setCH1(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={2}>
                   <TextField 
                     size="small"
                     label="CH2"
@@ -131,7 +131,7 @@ const Operation = () => {
                     onChange={(e) => setCH2(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={2}>
                   <TextField 
                     size="small"
                     label="CH3"
@@ -139,7 +139,7 @@ const Operation = () => {
                     onChange={(e) => setCH3(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={2}>
                   <TextField 
                     size="small"
                     label="CH4"
@@ -147,8 +147,7 @@ const Operation = () => {
                     onChange={(e) => setCH4(e.target.value)}
                   />
                 </Grid>
-              </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={2}>
                   <TextField 
                     size="small"
                     label="CH5"
@@ -156,7 +155,7 @@ const Operation = () => {
                     onChange={(e) => setCH5(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={2}>
                   <TextField 
                     size="small"
                     label="CH6"
@@ -164,7 +163,7 @@ const Operation = () => {
                     onChange={(e) => setCH6(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={2}>
                   <TextField 
                     size="small"
                     label="CH7"
@@ -172,7 +171,7 @@ const Operation = () => {
                     onChange={(e) => setCH7(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={2}>
                   <TextField 
                     size="small"
                     label="CH8"
@@ -180,7 +179,7 @@ const Operation = () => {
                     onChange={(e) => setCH8(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="TSID"
@@ -188,7 +187,7 @@ const Operation = () => {
                     onChange={(e) => setTSID(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="date"
@@ -196,7 +195,7 @@ const Operation = () => {
                     onChange={(e) => setDate(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="depotname"
@@ -204,7 +203,7 @@ const Operation = () => {
                     onChange={(e) => setDepotname(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="netprofit"
@@ -212,7 +211,7 @@ const Operation = () => {
                     onChange={(e) => setNetprofit(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={4}>
                   <TextField 
                     size="small"
                     label="restpoint"
@@ -220,7 +219,7 @@ const Operation = () => {
                     onChange={(e) => setRestpoint(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12}>
                   <TextField 
                     size="small"
                     label="route"
@@ -228,7 +227,7 @@ const Operation = () => {
                     onChange={(e) => setRoute(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="status"
@@ -236,7 +235,7 @@ const Operation = () => {
                     onChange={(e) => setStatus(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="sumvolume"
@@ -244,7 +243,7 @@ const Operation = () => {
                     onChange={(e) => setSumvolume(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="sumwt"
@@ -252,7 +251,7 @@ const Operation = () => {
                     onChange={(e) => setSumwt(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="time"
@@ -276,6 +275,7 @@ const Operation = () => {
                     onChange={(e) => setWay(e.target.value)}
                   />
                 </Grid>
+              </Grid>
               <Divider sx={{ marginTop:3, marginBottom:3 }}/>
               <Box display="flex" justifyContent="center" alignItems="center">
                 <Button variant="contained" color="error" onClick={handleClose} sx={{ marginRight:1 }}>ยกเลิก</Button>

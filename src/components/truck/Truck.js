@@ -122,7 +122,7 @@ const Truck = () => {
           <Divider />
             <DialogContent>
               <Grid container spacing={2}>
-                <Grid item xs={4}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="ข้อมูลช่อง"
@@ -130,7 +130,7 @@ const Truck = () => {
                     onChange={(e) => setNum1(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="ทะเบียนหัว"
@@ -138,7 +138,7 @@ const Truck = () => {
                     onChange={(e) => setNum2(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="ทะเบียนหาง"
@@ -146,7 +146,7 @@ const Truck = () => {
                     onChange={(e) => setNum3(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="น้ำหนัก"
@@ -154,7 +154,7 @@ const Truck = () => {
                     onChange={(e) => setNum4(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={6}>
                   <TextField 
                     size="small"
                     label="ประกัน"
@@ -162,7 +162,7 @@ const Truck = () => {
                     onChange={(e) => setNum5(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={6}>
                   <TextField 
                     size="small"
                     label="พขร"
@@ -170,7 +170,7 @@ const Truck = () => {
                     onChange={(e) => setNum6(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="สถานะ"
@@ -178,7 +178,7 @@ const Truck = () => {
                     onChange={(e) => setNum7(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={3}>
                   <TextField 
                     size="small"
                     label="เรทน้ำมัน"
@@ -186,7 +186,7 @@ const Truck = () => {
                     onChange={(e) => setNum8(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={6}>
                   <TextField 
                     size="small"
                     label="เวลาlocation"

@@ -79,20 +79,20 @@ const Respoint = () => {
                     onChange={(e) => setRestDetail(e.target.value)}
                   />
                 </Grid>
-                <Grid item xs={4}>
-                  <TextField 
-                    size="small"
-                    label="Rest_Location"
-                    fullWidth
-                    onChange={(e) => setRestLocation(e.target.value)}
-                  />
-                </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={8}>
                   <TextField 
                     size="small"
                     label="Rest_Name"
                     fullWidth
                     onChange={(e) => setRestName(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField 
+                    size="small"
+                    label="Rest_Location"
+                    fullWidth
+                    onChange={(e) => setRestLocation(e.target.value)}
                   />
                 </Grid>
               </Grid>

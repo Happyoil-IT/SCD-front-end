@@ -124,7 +124,7 @@ const CustomersDetail = ({row}) => {
               />
             </TableCell>
             <TableCell width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: "lightgray",}}>
-              <IconButton color="success" sx={{ backgroundColor: theme.palette.primary.contrastText,marginRight:1 }} onClick={completeData}><CheckCircleRoundedIcon/></IconButton>
+              <IconButton color="success" sx={{ backgroundColor: theme.palette.primary.contrastText,marginBottom:1 }} onClick={completeData}><CheckCircleRoundedIcon/></IconButton>
               <IconButton color="error" onClick={() => setEdit("")} sx={{ backgroundColor: theme.palette.primary.contrastText }}><CancelRoundedIcon/></IconButton>
             </TableCell>
           </TableRow>
@@ -140,7 +140,7 @@ const CustomersDetail = ({row}) => {
             <TableCell sx={{ textAlign:"center" }}>{row.location}</TableCell>
             <TableCell sx={{ textAlign:"center" }}>{row.route}</TableCell>
             <TableCell width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: "gray", }}>
-              <IconButton color="warning" onClick={() => setEdit(row.id)} sx={{ backgroundColor: theme.palette.primary.contrastText,marginRight:1 }}><EditNoteRoundedIcon/></IconButton>
+              <IconButton color="warning" onClick={() => setEdit(row.id)} sx={{ backgroundColor: theme.palette.primary.contrastText,marginBottom:1 }}><EditNoteRoundedIcon/></IconButton>
               <IconButton color="error" onClick={deleteData} sx={{ backgroundColor: theme.palette.primary.contrastText }}><DeleteRoundedIcon/></IconButton>
             </TableCell>
           </TableRow>

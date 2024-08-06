@@ -8,7 +8,7 @@ import AddBoxRoundedIcon from '@mui/icons-material/AddBoxRounded';
 import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import CustomersDetail from './CustomersDetail'
 import theme from "../../theme/theme";
-import { TablecellHeader } from "../../theme/style";
+import { IconButtonSuccess, TablecellHeader } from "../../theme/style";
 
 const Customers = () => {
   const [dataList, setDataList] = useState();
@@ -164,7 +164,7 @@ const Customers = () => {
                 <TablecellHeader>Debt</TablecellHeader>
                 <TablecellHeader>Location</TablecellHeader>
                 <TablecellHeader>Route</TablecellHeader>
-                <TablecellHeader sx={{ position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TablecellHeader>
+                <TablecellHeader sx={{ position: "sticky", right: 0,backgroundColor: theme.palette.error.light }} width={150}><IconButtonSuccess color="success" onClick={handleClickOpen}><AddBoxRoundedIcon/></IconButtonSuccess></TablecellHeader>
               </TableRow>
             </TableHead>
             <TableBody>

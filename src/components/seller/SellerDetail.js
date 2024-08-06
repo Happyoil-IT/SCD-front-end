@@ -9,6 +9,7 @@ import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import theme from "../../theme/theme";
+import { IconButtonError, IconButtonSuccess, IconButtonWarning } from "../../theme/style";
 
 const SellerDetail = ({row}) => {
     const [edit,setEdit] = React.useState("");
@@ -50,7 +51,7 @@ const SellerDetail = ({row}) => {
         {
           edit === row.id ?
           <TableRow>
-            <TableCell sx={{ backgroundColor: "lightgray" }}>{row.id}</TableCell>
+            <TableCell sx={{ backgroundColor: theme.palette.grey[300] }}>{row.id}</TableCell>
             <TableCell>
               <TextField 
                 size="small"
@@ -83,21 +84,21 @@ const SellerDetail = ({row}) => {
                 fullWidth
               />
             </TableCell>
-            <TableCell width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: "lightgray",}}>
-              <IconButton color="success" sx={{ backgroundColor: theme.palette.primary.contrastText,marginRight:1 }} onClick={completeData}><CheckCircleRoundedIcon/></IconButton>
-              <IconButton color="error" onClick={() => setEdit("")} sx={{ backgroundColor: theme.palette.primary.contrastText }}><CancelRoundedIcon/></IconButton>
+            <TableCell width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: theme.palette.grey[300],}}>
+              <IconButtonSuccess color="success" sx={{ marginRight:1 }} onClick={completeData}><CheckCircleRoundedIcon/></IconButtonSuccess>
+              <IconButtonError color="error" onClick={() => setEdit("")} ><CancelRoundedIcon/></IconButtonError>
             </TableCell>
           </TableRow>
           :
-          <TableRow sx={{ backgroundColor: "lightgray" }}>
-            <TableCell sx={{ textAlign:"center",position: "sticky", left: 0, backgroundColor: "gray",color: theme.palette.primary.contrastText }}>{row.id}</TableCell>
+          <TableRow sx={{ backgroundColor: theme.palette.grey[200] }}>
+            <TableCell sx={{ textAlign:"center",position: "sticky", left: 0, backgroundColor: theme.palette.grey[400],fontWeight: "bold" }}>{row.id}</TableCell>
             <TableCell sx={{ textAlign:"center" }}>{row.otp}</TableCell>
             <TableCell sx={{ textAlign:"center" }}>{row.otpback}</TableCell>
             <TableCell sx={{ textAlign:"center" }}>{row.salecode}</TableCell>
             <TableCell sx={{ textAlign:"center" }}>{row.salename}</TableCell>
-            <TableCell width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: "gray", }}>
-              <IconButton color="warning" onClick={() => setEdit(row.id)} sx={{ backgroundColor: theme.palette.primary.contrastText,marginRight:1 }}><EditNoteRoundedIcon/></IconButton>
-              <IconButton color="error" onClick={deleteData} sx={{ backgroundColor: theme.palette.primary.contrastText }}><DeleteRoundedIcon/></IconButton>
+            <TableCell width={150} sx={{ textAlign: "center",position: "sticky", right: 0, backgroundColor: theme.palette.grey[400], }}>
+              <IconButtonWarning color="warning" onClick={() => setEdit(row.id)} sx={{ marginRight:1 }}><EditNoteRoundedIcon/></IconButtonWarning>
+              <IconButtonError color="error" onClick={deleteData}><DeleteRoundedIcon/></IconButtonError>
             </TableCell>
           </TableRow>
         }

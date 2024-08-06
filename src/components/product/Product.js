@@ -9,7 +9,7 @@ import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import ProductDetail from './ProductDetail'
 import theme from "../../theme/theme";
 import { Link } from "react-router-dom";
-import { TablecellHeader } from "../../theme/style";
+import { IconButtonSuccess, TablecellHeader } from "../../theme/style";
 
 const Product = () => {
   const [dataList, setDataList] = useState();
@@ -100,7 +100,7 @@ const Product = () => {
                 <TablecellHeader sx={{ position: "sticky", left: 0, width: 50 }}>ID</TablecellHeader>
                 <TablecellHeader>SG</TablecellHeader>
                 <TablecellHeader>PD_Name</TablecellHeader>
-                <TablecellHeader sx={{ position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TablecellHeader>
+                <TablecellHeader sx={{ position: "sticky", right: 0,backgroundColor: theme.palette.error.light }} width={150}><IconButtonSuccess color="success" onClick={handleClickOpen} ><AddBoxRoundedIcon/></IconButtonSuccess></TablecellHeader>
               </TableRow>
             </TableHead>
             <TableBody>

@@ -9,7 +9,7 @@ import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import TruckDetail from './TruckDetal'
 import theme from "../../theme/theme";
 import { Link } from "react-router-dom";
-import { TablecellHeader } from "../../theme/style";
+import { TablecellHeader,IconButtonSuccess } from "../../theme/style";
 
 const Truck = () => {
   const [dataList, setDataList] = useState();
@@ -245,7 +245,7 @@ const Truck = () => {
                 <TablecellHeader>เวลาlocation</TablecellHeader>
                 <TablecellHeader>เวลาสถานะ</TablecellHeader>
                 <TablecellHeader>แผนPM</TablecellHeader>
-                <TablecellHeader sx={{ position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TablecellHeader>
+                <TablecellHeader sx={{ position: "sticky", right: 0,backgroundColor: theme.palette.error.light }} width={150}><IconButtonSuccess color="success" onClick={handleClickOpen}><AddBoxRoundedIcon/></IconButtonSuccess></TablecellHeader>
               </TableRow>
             </TableHead>
             <TableBody>

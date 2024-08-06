@@ -9,7 +9,7 @@ import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import OperationDetail from './OperationDetail'
 import theme from "../../theme/theme";
 import { Link } from "react-router-dom";
-import { TablecellHeader } from "../../theme/style";
+import { IconButtonSuccess, TablecellHeader } from "../../theme/style";
 
 const Operation = () => {
   const [dataList, setDataList] = useState();
@@ -309,7 +309,7 @@ const Operation = () => {
                 <TablecellHeader>Truck</TablecellHeader>
                 <TablecellHeader>ระยะทาง</TablecellHeader>
                 <TablecellHeader sx={{ textAlign: "left" }}>Route</TablecellHeader>
-                <TablecellHeader sx={{ position: "sticky", right: 0, }} width={150}><IconButton color="success" onClick={handleClickOpen} sx={{ backgroundColor: theme.palette.primary.contrastText }}><AddBoxRoundedIcon/></IconButton></TablecellHeader>
+                <TablecellHeader sx={{ position: "sticky", right: 0,backgroundColor: theme.palette.error.light }} width={150}><IconButtonSuccess color="success" onClick={handleClickOpen}><AddBoxRoundedIcon/></IconButtonSuccess></TablecellHeader>
               </TableRow>
             </TableHead>
             <TableBody>

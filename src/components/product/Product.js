@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, Grid, Icon, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from "@mui/material";
-import database from "../../server/firebase";
+import { database } from "../../server/firebase";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';

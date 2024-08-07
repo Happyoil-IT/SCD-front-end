@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, Grid, Icon, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from "@mui/material";
-import database from "../../server/firebase";
+import { database } from "../../server/firebase";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
@@ -288,27 +288,27 @@ const Operation = () => {
             <TableHead>
               <TableRow>
                 <TablecellHeader sx={{ position: "sticky", left: 0 }}>ID</TablecellHeader>
-                <TablecellHeader>BEP</TablecellHeader>
-                <TablecellHeader>CH1</TablecellHeader>
-                <TablecellHeader>CH2</TablecellHeader>
-                <TablecellHeader>CH3</TablecellHeader>
-                <TablecellHeader>CH4</TablecellHeader>
-                <TablecellHeader>CH5</TablecellHeader>
-                <TablecellHeader>CH6</TablecellHeader>
-                <TablecellHeader>CH7</TablecellHeader>
-                <TablecellHeader>CH8</TablecellHeader>
-                <TablecellHeader>TSID</TablecellHeader>
-                <TablecellHeader>Date</TablecellHeader>
-                <TablecellHeader>Depotname</TablecellHeader>
-                <TablecellHeader>Netprofit</TablecellHeader>
-                <TablecellHeader>Restpoint</TablecellHeader>
-                <TablecellHeader>Status</TablecellHeader>
-                <TablecellHeader>Sumvolume</TablecellHeader>
-                <TablecellHeader>Sumwt</TablecellHeader>
-                <TablecellHeader>Time</TablecellHeader>
-                <TablecellHeader>Truck</TablecellHeader>
-                <TablecellHeader>ระยะทาง</TablecellHeader>
-                <TablecellHeader sx={{ textAlign: "left" }}>Route</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>BEP</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>CH1</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>CH2</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>CH3</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>CH4</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>CH5</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>CH6</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>CH7</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>CH8</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>TSID</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>Date</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>Depotname</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>Netprofit</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>Restpoint</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>Status</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>Sumvolume</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>Sumwt</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>Time</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>Truck</TablecellHeader>
+                <TablecellHeader sx={{ paddingLeft:5,paddingRight:5 }}>ระยะทาง</TablecellHeader>
+                <TablecellHeader sx={{ textAlign: "left"}}>Route</TablecellHeader>
                 <TablecellHeader sx={{ position: "sticky", right: 0,backgroundColor: theme.palette.error.light }} width={150}><IconButtonSuccess color="success" onClick={handleClickOpen}><AddBoxRoundedIcon/></IconButtonSuccess></TablecellHeader>
               </TableRow>
             </TableHead>

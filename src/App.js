@@ -11,16 +11,23 @@ import Seller from "./components/seller/Seller"
 import Restpoint from "./components/respoint/Restpoint"
 import Order from "./components/order/Order"
 import Operation from "./components/operation/Operation"
+import Login from "./components/login/Login"
+import Register from "./components/login/Register"
 
 const App = () => {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={
-                    <Box sx={{ display: 'flex' }}>
-                      <Navbar />
-                      <Dashboard />
-                    </Box>
+                    <Login />
+                    
+                    // <Box sx={{ display: 'flex' }}>
+                    //   <Navbar />
+                    //   <Dashboard />
+                    // </Box>
+                } />
+                <Route path="/register" element={
+                    <Register />
                 } />
                 <Route path="/*" element={
                     <Box sx={{ display: 'flex' }} >
@@ -31,6 +38,9 @@ const App = () => {
                             flexGrow: 1, backgroundSize: 'auto'
                         }}>
                             <Routes>
+                                <Route path="/deshboard" element={
+                                    <Dashboard />
+                                } />
                                 <Route path="/order" element={
                                     < Order />
                                 } />

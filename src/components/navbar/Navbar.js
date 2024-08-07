@@ -1,6 +1,10 @@
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import { auth } from '../../server/firebase';
+import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -87,6 +91,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 export default function PersistentDrawerLeft() {
+  const navigate = useNavigate();
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
 
@@ -97,6 +102,29 @@ export default function PersistentDrawerLeft() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  const UserSignOut = () => {
+    withReactContent(Swal).fire({
+      title: 'ต้องการออกจากระบบใช่หรือไม่',
+      icon : 'error',
+      confirmButtonText: 'ตกลง',
+      cancelButtonText: 'ยกเลิก',
+      showCancelButton: true ,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        signOut(auth).then(() => {
+          navigate("/")
+          Swal.fire('ออกจากระบบเรียบร้อย', '', 'success');
+        }).catch(( error ) => {
+          Swal.fire('ไม่สามารถออกจากระบบได้', '', 'error');
+          console.log(error);
+        })
+      } else if (result.isDenied) {
+          Swal.fire('ออกจากระบบล้มเหลว', '', 'error');
+          console.log(error);
+      }
+    });
+  }
 
   return (
     < >
@@ -129,7 +157,7 @@ export default function PersistentDrawerLeft() {
                 <IconButton color="inherit">
                   <ManageAccountsIcon/>
                 </IconButton>
-                <IconButton color="inherit">
+                <IconButton color="inherit" onClick={UserSignOut}>
                   <MeetingRoomIcon/>
                 </IconButton>
               </Grid>
@@ -164,7 +192,7 @@ export default function PersistentDrawerLeft() {
         </List>
         <Divider />
         <List>
-          {['customerid', 'depot', 'poduct', 'restpoint', 'saller', 'situation', 'truck'].map((text, index) => (
+          {['customerid', 'depot', 'poduct', 'restpoint', 'seller', 'situation', 'truck'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton
                component={Link}

@@ -47,8 +47,10 @@ const Seller = () => {
         salecode : salecode,
         salename : salename
       }).then(() => {
+        Swal.fire('เพิ่มข้อมูลสำเร็จ', '', 'success');
         console.log('Data pushed successfully');
       }).catch((error) => {
+        Swal.fire('เพิ่มข้อมูลไม่สำเร็จ', '', 'error');
         console.error('Error pushing data:', error);
       });
       setOpen(false);

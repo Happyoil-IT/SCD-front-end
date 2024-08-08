@@ -71,47 +71,61 @@ const TruckDetail = ({row}) => {
     };
   
     const completeData = () => {
-      database.ref("primarydata/truck").child(row.id).update({
-        Cap1 : Cap1,
-        Cap2 : Cap2,
-        Cap3 : Cap3,
-        Cap4 : Cap4,
-        Cap5 : Cap5,
-        Cap6 : Cap6,
-        Cap7 : Cap7,
-        Cap8 : Cap8,
-        PD1 : PD1,
-        PD2 : PD2,
-        PD3 : PD3,
-        PD4 : PD4,
-        PD5 : PD5,
-        PD6 : PD6,
-        PD7 : PD7,
-        PD8 : PD8,
-        V1 : V1,
-        V2 : V2,
-        V3 : V3,
-        V4 : V4,
-        V5 : V5,
-        V6 : V6,
-        V7 : V7,
-        V8 : V8,
-        locationล่าสุด: num1,
-        จำนวนช่อง : num2,
-        ทะเบียนหัว : num3,
-        ทะเบียนหาง : num4,
-        น้ำหนัก : num5,
-        ประกัน : num6,
-        พขร : num7,
-        พรบ : num8,
-        ภาษี : num9,
-        สถานะรถ : num10,
-        เรทน้ำมัน : num11,
-        เวลาlocation : num12,
-        เวลาสถานะ : num13,
-        แผนPM : num14,
-      });
-      setEdit("");
+      withReactContent(Swal).fire({
+        title: 'ยืนยันการแก้ไขข้อมูลหรือไม่',
+        icon : 'warning',
+        confirmButtonText: 'ตกลง',
+        cancelButtonText: 'ยกเลิก',
+        showCancelButton: true ,
+      }).then((result) => {
+        if (result.isConfirmed) {
+              database.ref("primarydata/truck").child(row.id).update({
+                Cap1 : Cap1,
+                Cap2 : Cap2,
+                Cap3 : Cap3,
+                Cap4 : Cap4,
+                Cap5 : Cap5,
+                Cap6 : Cap6,
+                Cap7 : Cap7,
+                Cap8 : Cap8,
+                PD1 : PD1,
+                PD2 : PD2,
+                PD3 : PD3,
+                PD4 : PD4,
+                PD5 : PD5,
+                PD6 : PD6,
+                PD7 : PD7,
+                PD8 : PD8,
+                V1 : V1,
+                V2 : V2,
+                V3 : V3,
+                V4 : V4,
+                V5 : V5,
+                V6 : V6,
+                V7 : V7,
+                V8 : V8,
+                locationล่าสุด: num1,
+                จำนวนช่อง : num2,
+                ทะเบียนหัว : num3,
+                ทะเบียนหาง : num4,
+                น้ำหนัก : num5,
+                ประกัน : num6,
+                พขร : num7,
+                พรบ : num8,
+                ภาษี : num9,
+                สถานะรถ : num10,
+                เรทน้ำมัน : num11,
+                เวลาlocation : num12,
+                เวลาสถานะ : num13,
+                แผนPM : num14,
+              });
+            setEdit("");
+            Swal.fire('แก้ไขข้อมูลสำเร็จ', '', 'success');
+        } else if (result.isDenied) {
+            Swal.fire('ยกเลิกการแก้ไขข้อมูล', '', 'info');
+            setEdit("");
+        }
+    });
     };
   
     return (

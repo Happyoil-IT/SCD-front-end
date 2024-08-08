@@ -42,16 +42,30 @@ const CustomersDetail = ({row}) => {
     };
   
     const completeData = () => {
-      database.ref("primarydata/customersid").child(row.id).update({
-        ID : customerid,
-        address : address,
-        creditlimit : creditlimit,
-        creditterm : creditterm,
-        custag : custag,
-        location : location,
-        route : route,
-      });
-      setEdit("");
+      withReactContent(Swal).fire({
+        title: 'ยืนยันการแก้ไขข้อมูลหรือไม่',
+        icon : 'warning',
+        confirmButtonText: 'ตกลง',
+        cancelButtonText: 'ยกเลิก',
+        showCancelButton: true ,
+      }).then((result) => {
+        if (result.isConfirmed) {
+            database.ref("primarydata/customersid").child(row.id).update({
+              ID : customerid,
+              address : address,
+              creditlimit : creditlimit,
+              creditterm : creditterm,
+              custag : custag,
+              location : location,
+              route : route,
+            });
+            setEdit("");
+            Swal.fire('แก้ไขข้อมูลสำเร็จ', '', 'success');
+        } else if (result.isDenied) {
+            Swal.fire('ยกเลิกการแก้ไขข้อมูล', '', 'info');
+            setEdit("");
+        }
+    });
     };
   
     return (

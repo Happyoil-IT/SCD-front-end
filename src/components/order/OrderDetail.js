@@ -53,29 +53,43 @@ const OrderDetail = ({row}) => {
     };
   
     const completeData = () => {
-      database.ref("order").child(row.id).update({
-        address: address,
-        billing: billing,
-        buyprice: buyprice,
-        customer: customer,
-        date: date,
-        depot: depot,
-        location: location,
-        orderseller: orderseller,
-        ordersellerID: ordersellerID,
-        orderstatus: orderstatus,
-        ordertag: ordertag,
-        piclink: piclink,
-        product: product,
-        sellprice: sellprice,
-        seq: seq,
-        time: time,
-        truck: truck,
-        volume: volume,
-        wt : wt,
-        กำหนดชำระ : fixed
-      });
-      setEdit("");
+      withReactContent(Swal).fire({
+        title: 'ยืนยันการแก้ไขข้อมูลหรือไม่',
+        icon : 'warning',
+        confirmButtonText: 'ตกลง',
+        cancelButtonText: 'ยกเลิก',
+        showCancelButton: true ,
+      }).then((result) => {
+        if (result.isConfirmed) {
+            database.ref("order").child(row.id).update({
+              address: address,
+              billing: billing,
+              buyprice: buyprice,
+              customer: customer,
+              date: date,
+              depot: depot,
+              location: location,
+              orderseller: orderseller,
+              ordersellerID: ordersellerID,
+              orderstatus: orderstatus,
+              ordertag: ordertag,
+              piclink: piclink,
+              product: product,
+              sellprice: sellprice,
+              seq: seq,
+              time: time,
+              truck: truck,
+              volume: volume,
+              wt : wt,
+              กำหนดชำระ : fixed
+            });
+            setEdit("");
+            Swal.fire('แก้ไขข้อมูลสำเร็จ', '', 'success');
+        } else if (result.isDenied) {
+            Swal.fire('ยกเลิกการแก้ไขข้อมูล', '', 'info');
+            setEdit("");
+        }
+    });
     };
   
     return (

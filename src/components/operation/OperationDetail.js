@@ -13,7 +13,6 @@ import { IconButtonError, IconButtonWarning } from "../../theme/style";
 
 const OrderDetail = ({row}) => {
     const [edit,setEdit] = React.useState("");
-    const [otp,setOTP] = React.useState(row.otp === null ? "-" : row.otp);
     const [BEP,setBEP] = React.useState(row.BEP === null ? "-" : row.BEP);
     const [CH1,setCH1] = React.useState(row.CH1 === null ? "-" : row.CH1);
     const [CH2,setCH2] = React.useState(row.CH2 === null ? "-" : row.CH2);
@@ -34,7 +33,7 @@ const OrderDetail = ({row}) => {
     const [sumwt,setSumwt] = React.useState(row.sumwt === null ? "-" : row.sumwt);
     const [time,setTime] = React.useState(row.time === null ? "-" : row.time);
     const [truck,setTruck] = React.useState(row.truck === null ? "-" : row.truck);
-    const [way,setWay] = React.useState(row.way === null ? "-" : row.way);
+    const [way,setWay] = React.useState(row.ระยะทาง === null ? "-" : row.ระยะทาง);
     const deleteData = () => {
       withReactContent(Swal).fire({
         title: 'ต้องการลบใช่หรือไม่',
@@ -55,30 +54,44 @@ const OrderDetail = ({row}) => {
     };
   
     const completeData = () => {
-      database.ref("operation").child(row.id).update({
-        BEP: BEP,
-        CH1: CH1,
-        CH2: CH2,
-        CH3: CH3,
-        CH4: CH4,
-        CH5: CH5,
-        CH6: CH6,
-        CH7: CH7,
-        CH8: CH8,
-        TSID: TSID,
-        date: date,
-        depotname: depotname,
-        netprofit: netprofit,
-        restpoint: restpoint,
-        route: route,
-        status: status,
-        sumvolume: sumvolume,
-        sumwt: sumwt,
-        time: time,
-        truck: truck,
-        ระยะทาง: way
-      });
-      setEdit("");
+      withReactContent(Swal).fire({
+        title: 'ยืนยันการแก้ไขข้อมูลหรือไม่',
+        icon : 'warning',
+        confirmButtonText: 'ตกลง',
+        cancelButtonText: 'ยกเลิก',
+        showCancelButton: true ,
+      }).then((result) => {
+        if (result.isConfirmed) {
+            database.ref("operation").child(row.id).update({
+              BEP: BEP,
+              CH1: CH1,
+              CH2: CH2,
+              CH3: CH3,
+              CH4: CH4,
+              CH5: CH5,
+              CH6: CH6,
+              CH7: CH7,
+              CH8: CH8,
+              TSID: TSID,
+              date: date,
+              depotname: depotname,
+              netprofit: netprofit,
+              restpoint: restpoint,
+              route: route,
+              status: status,
+              sumvolume: sumvolume,
+              sumwt: sumwt,
+              time: time,
+              truck: truck,
+              ระยะทาง: way
+            });
+            setEdit("");
+            Swal.fire('แก้ไขข้อมูลสำเร็จ', '', 'success');
+        } else if (result.isDenied) {
+            Swal.fire('ยกเลิกการแก้ไขข้อมูล', '', 'info');
+            setEdit("");
+        }
+    });
     };
   
     return (

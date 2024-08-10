@@ -20,11 +20,6 @@ const App = () => {
             <Routes>
                 <Route path="/" element={
                     <Login />
-                    
-                    // <Box sx={{ display: 'flex' }}>
-                    //   <Navbar />
-                    //   <Dashboard />
-                    // </Box>
                 } />
                 <Route path="/register" element={
                     <Register />
@@ -38,7 +33,7 @@ const App = () => {
                             flexGrow: 1, backgroundSize: 'auto'
                         }}>
                             <Routes>
-                                <Route path="/deshboard" element={
+                                <Route path="/dashboard" element={
                                     <Dashboard />
                                 } />
                                 <Route path="/order" element={

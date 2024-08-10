@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Button, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, Grid, Icon, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from "@mui/material";
+import { Box, Button, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, Grid, Icon, IconButton, LinearProgress, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from "@mui/material";
 import { database } from "../../server/firebase";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
@@ -16,6 +16,8 @@ const Product = () => {
   const [open,setOpen] = React.useState();
   const [sg,setSG] = React.useState("");
   const [pdname,setPDName] = React.useState("");
+  const [progress, setProgress] = React.useState(0);
+  const [query, setQuery] = React.useState('idle');
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -35,6 +37,21 @@ const Product = () => {
             console.log(dataList);
             setDataList(dataList);
         });
+
+        const timer = setInterval(() => {
+          setProgress((oldProgress) => {
+            if (oldProgress === 100) {
+              setQuery('success');
+              return 0;
+            }
+            const diff = Math.random() * 10;
+            return Math.min(oldProgress + diff, 100);
+          });
+        }, 200);
+    
+        return () => {
+          clearInterval(timer);
+        };
     }, []);
 
     const handleSubmit = () => {
@@ -105,16 +122,27 @@ const Product = () => {
                 <TablecellHeader sx={{ position: "sticky", right: 0,backgroundColor: theme.palette.error.light }} width={150}><IconButtonSuccess color="success" onClick={handleClickOpen} ><AddBoxRoundedIcon/></IconButtonSuccess></TablecellHeader>
               </TableRow>
             </TableHead>
-            <TableBody>
             {
-              dataList ? 
-              dataList.map((row) => 
-                <ProductDetail row={row} key={row} />
-              )
-              :
-              ""
-            }
-            </TableBody>
+              query === 'success' ? (
+                <TableBody>
+                  {
+                    dataList ? 
+                    dataList.map((row) => 
+                      <ProductDetail row={row} key={row} />
+                    )
+                    :
+                    ""
+                  }
+                </TableBody>
+              ) : (
+                <TableBody>
+                  <TableRow>
+                    <TableCell colSpan={4}>
+                        <LinearProgress variant="determinate" color="warning" value={progress} />
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              )}
           </Table>
         </TableContainer>
       </Box>

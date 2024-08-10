@@ -17,7 +17,7 @@ const Login = () => {
     const SignIn = (e) => {
         signInWithEmailAndPassword(auth, email, password)
          .then((userCredential) => {
-            navigate("/deshboard");
+            navigate("/dashboard");
             Swal.fire('ยินดีต้อนรับเข้าสู่ระบบ', '', 'success');
             console.log(userCredential);
          }).catch(( error ) => {

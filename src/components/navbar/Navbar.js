@@ -181,7 +181,7 @@ export default function PersistentDrawerLeft() {
             <ListItem key={text} disablePadding>
               <ListItemButton
                component={Link}
-               to={index === 0 ? '/' : index === 1 ? '/operation' : "/order"}>
+               to={index === 0 ? '/dashboard' : index === 1 ? '/operation' : "/order"}>
                 <ListItemIcon>
                   {index === 0 ? <HomeIcon /> : index === 1 ? <AccountCircleIcon /> : <ListAltIcon />}
                 </ListItemIcon>

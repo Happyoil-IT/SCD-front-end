@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Box, Button, Container, Grid, InputAdornment, Paper, TextField, Typography } from "@mui/material";
 import { database,auth } from "../../server/firebase";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import theme from "../../theme/theme";
 import { Link, useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import EmailIcon from '@mui/icons-material/Email';
 import PasswordIcon from '@mui/icons-material/Password';
 
@@ -15,6 +15,7 @@ const Login = () => {
     const [password,setPassword] = useState("");
 
     const SignIn = (e) => {
+        email !== "" && password !== "" ?
         signInWithEmailAndPassword(auth, email, password)
          .then((userCredential) => {
             navigate("/dashboard");
@@ -24,7 +25,23 @@ const Login = () => {
             Swal.fire('Email หรือ Pasword ไม่ถูกต้อง', '', 'error');
             console.log(error);
          })
+         : Swal.fire('กรุณากรอก Email และ Password', '', 'warning');
     }
+
+    useEffect(() => {
+      onAuthStateChanged(auth, (user) => {
+            if (user) {
+              // User is signed in.
+              Swal.fire('ยินดีต้อนรับเข้าสู่ระบบ', '', 'success');
+              navigate("/dashboard");
+              console.log("true");
+            } else {
+              console.log("false");
+              navigate("/");
+              // User is signed out.
+            }
+           })
+    }, [])
 
   return (
     <Container maxWidth="sm" sx={{ textAlign: "center",marginTop: 13 }}>

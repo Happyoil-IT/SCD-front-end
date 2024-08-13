@@ -12,21 +12,35 @@ import PasswordIcon from '@mui/icons-material/Password';
 const Register = () => {
     const [email, setEmail] = useState("");
     const [password,setPassword] = useState("");
+    const [passwordAgain,setPasswordAgain] = useState("");
 
     const SignUp = (e) => {
-        createUserWithEmailAndPassword(auth, email, password)
-         .then((userCredential) => {
-            navigate("/");
-            Swal.fire('สมัครสมาชิกเรียบร้อย', '', 'success');
-            console.log(userCredential);
-         }).catch(( error ) => {
-            Swal.fire('Email นี้สมัครสมาชิกแล้ว', '', 'error');
-            console.log(error);
-         })
+        email.split('@')[1] == "happysoft.com" ?
+          password == passwordAgain ?
+            withReactContent(Swal).fire({
+              title: 'ต้องการสมัครสมาชิกใช่หรือไม่',
+              icon : 'success',
+              confirmButtonText: 'ตกลง',
+              cancelButtonText: 'ยกเลิก',
+              showCancelButton: true ,
+            }).then((result) => {
+              if (result.isConfirmed) {
+                createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    Swal.fire('สมัครสมาชิกเรียบร้อย', '', 'success');
+                    console.log(userCredential);
+                })
+              } else if (result.isDenied) {
+                  Swal.fire('ยกเลิกการสมัครสมาชิก', '', 'error');
+                  console.log(error);
+              }
+            })
+          : Swal.fire('passwordไม่ตรงกัน', '', 'warning')
+        : Swal.fire('กรุณากรอกอีเมลใหม่ โดยใช้ @happysoft.com', '', 'warning')
     }
 
   return (
-    <Container maxWidth="sm" sx={{ textAlign: "center",marginTop: 15 }}>
+    <Container maxWidth="sm" sx={{ textAlign: "center",marginTop: 13 }}>
         <Paper sx={{ backgroundColor: theme.palette.grey[300],borderRadius:5 }}>
             <Box height={50} sx={{ backgroundColor: theme.palette.error.dark,borderTopLeftRadius:10,borderTopRightRadius:10 }}/>
             <Box p={5} marginTop={-3} marginBottom={-2}>
@@ -39,7 +53,7 @@ const Register = () => {
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
                         <TextField 
-                            label="กรอกอีเมล"
+                            label="กรอกอีเมลโดยใช้ @happysoft.com"
                             size="small"
                             type="email"
                             variant="filled"
@@ -65,6 +79,25 @@ const Register = () => {
                             fullWidth
                             defaultValue={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            sx={{ backgroundColor: theme.palette.primary.contrastText }}
+                            InputProps={{
+                                startAdornment: (
+                                  <InputAdornment position="start">
+                                    <PasswordIcon />
+                                  </InputAdornment>
+                                ),
+                              }}
+                        />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TextField 
+                            label="กรอกรหัสผ่านอีกครั้ง"
+                            size="small"
+                            type="password"
+                            variant="filled"
+                            fullWidth
+                            defaultValue={passwordAgain}
+                            onChange={(e) => setPasswordAgain(e.target.value)}
                             sx={{ backgroundColor: theme.palette.primary.contrastText }}
                             InputProps={{
                                 startAdornment: (

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, Grid, Icon, IconButton, LinearProgress, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from "@mui/material";
-import { database } from "../../server/firebase";
+import { auth, database } from "../../server/firebase";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
@@ -8,10 +8,12 @@ import AddBoxRoundedIcon from '@mui/icons-material/AddBoxRounded';
 import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import OperationDetail from './OperationDetail'
 import theme from "../../theme/theme";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IconButtonSuccess, TablecellHeader } from "../../theme/style";
+import { onAuthStateChanged } from "firebase/auth";
 
 const Operation = () => {
+  const navigate = useNavigate();
   const [dataList, setDataList] = useState();
   const [open,setOpen] = React.useState();
   const [BEP,setBEP] = React.useState("");
@@ -71,6 +73,18 @@ const Operation = () => {
               clearInterval(timer);
             };
         });
+
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            // User is signed in.
+            console.log("true");
+          } else {
+            console.log("false");
+            Swal.fire('กรุณาเข้าสู่ระบบ', '', 'error');
+            navigate("/");
+            // User is signed out.
+          }
+         })
     }, []);
 
     const handleSubmit = () => {

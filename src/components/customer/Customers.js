@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, CircularProgress, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, Fade, Grid, Icon, IconButton, LinearProgress, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from "@mui/material";
-import { database } from "../../server/firebase";
+import { database,auth } from "../../server/firebase";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
@@ -9,8 +9,11 @@ import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import CustomersDetail from './CustomersDetail'
 import theme from "../../theme/theme";
 import { IconButtonSuccess, TablecellHeader } from "../../theme/style";
+import { onAuthStateChanged } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const Customers = () => {
+  const navigate = useNavigate();
   const [dataList, setDataList] = useState();
   const [open,setOpen] = React.useState();
   const [customerid,setCustomerID] = React.useState("");
@@ -57,6 +60,19 @@ const Customers = () => {
               clearInterval(timer);
             };
         });
+
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            // User is signed in.
+            console.log("true");
+          } else {
+            console.log("false");
+            Swal.fire('กรุณาเข้าสู่ระบบ', '', 'error');
+            navigate("/");
+            // User is signed out.
+          }
+         })
+
     }, []);
 
     const handleSubmit = () => {
